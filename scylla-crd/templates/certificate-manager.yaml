@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: scylla-operator-serving-cert
+  namespace: scylla-operator-system
+spec:
+  dnsNames:
+    - scylla-operator-webhook-service.scylla-operator-system.svc
+    - scylla-operator-webhook-service.scylla-operator-system.svc.cluster.local
+  issuerRef:
+    kind: ClusterIssuer
+    name: ca-issuer
+  secretName: webhook-server-cert

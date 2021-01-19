@@ -3,8 +3,8 @@ annotations:
 apiVersion: v2
 appVersion: 4.1.11
 description: Scylla is a free and open-source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency operations for all clients.
-home: todo
-icon: todo
+home: https://magusdevops.com
+icon: https://bitnami.com/assets/stacks/cassandra/img/cassandra-stack-220x234.png
 keywords:
   - scylla
   - cassandra

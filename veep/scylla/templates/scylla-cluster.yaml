@@ -12,14 +12,14 @@ spec:
         name: manager-rack
         resources:
           limits:
+            cpu: 4
+            memory: 8Gi
+          requests:
             cpu: 2
             memory: 4Gi
-          requests:
-            cpu: 1
-            memory: 1Gi
         scyllaAgentConfig: scylla-agent-config
         scyllaConfig: scylla-config
         storage:
-          capacity: 5Gi
+          capacity: 10Gi
   developerMode: true
-  version: 4.2.0
+  version: 4.3.0

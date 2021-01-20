@@ -1,0 +1,26 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: scylla-manager-member-rolebinding
+  namespace: scylla-manager-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: scylla-manager-cluster-member
+subjects:
+  - kind: ServiceAccount
+    name: scylla-manager-cluster-member
+    namespace: scylla-manager-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: scylla-manager-rolebinding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: scylla-manager-manager-role
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: scylla-manager-system

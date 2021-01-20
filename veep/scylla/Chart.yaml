@@ -13,7 +13,7 @@ keywords:
 maintainers:
   - email: jacobjohansen@magusdevops.com
     name: Jacob Johansen
-name: scylla-operator
+name: scylla
 sources:
   - http://cassandra.apache.org
 version: 1.0.0

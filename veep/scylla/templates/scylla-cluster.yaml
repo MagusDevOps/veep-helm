@@ -4,7 +4,7 @@ metadata:
   name: scylla-manager-cluster
   namespace: scylla-manager-system
 spec:
-  agentVersion: 2.2.0
+  agentVersion: 2.2.2
   datacenter:
     name: manager-dc
     racks:
@@ -12,8 +12,8 @@ spec:
         name: manager-rack
         resources:
           limits:
-            cpu: 1
-            memory: 1Gi
+            cpu: 2
+            memory: 4Gi
           requests:
             cpu: 1
             memory: 1Gi

@@ -4,7 +4,7 @@ metadata:
   name: scylla-manager-cluster
   namespace: scylla-manager-system
 spec:
-  agentVersion: 2.2.2
+  agentVersion: 2.2.1
   datacenter:
     name: manager-dc
     racks:

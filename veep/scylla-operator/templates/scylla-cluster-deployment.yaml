@@ -1,0 +1,25 @@
+apiVersion: scylla.scylladb.com/v1
+kind: ScyllaCluster
+metadata:
+  name: scylla-manager-cluster
+  namespace: scylla-manager-system
+spec:
+  agentVersion: 2.2.0
+  datacenter:
+    name: manager-dc
+    racks:
+      - members: 1
+        name: manager-rack
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+          requests:
+            cpu: 1
+            memory: 1Gi
+        scyllaAgentConfig: scylla-agent-config
+        scyllaConfig: scylla-config
+        storage:
+          capacity: 5Gi
+  developerMode: true
+  version: 4.2.0

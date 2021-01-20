@@ -21,5 +21,5 @@ spec:
         scyllaConfig: scylla-config
         storage:
           capacity: 10Gi
-  developerMode: true
+  developerMode: false
   version: 4.3.0

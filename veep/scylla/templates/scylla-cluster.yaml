@@ -1,8 +1,8 @@
 apiVersion: scylla.scylladb.com/v1
 kind: ScyllaCluster
 metadata:
-  name: scylla-manager-cluster
-  namespace: scylla-manager-system
+  name: simple-scylla-cluster
+  namespace: scylla
 spec:
   agentVersion: 2.2.1
   datacenter:

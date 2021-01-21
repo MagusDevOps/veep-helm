@@ -1,4 +1,4 @@
-apiVersion: admissionregistration.k8s.io/v1b
+apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
   annotations:
@@ -24,6 +24,7 @@ webhooks:
           - UPDATE
         resources:
           - scyllaclusters
+    admissionReviewVersions: ["v1", "v1beta1"]
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
@@ -39,7 +40,7 @@ webhooks:
         namespace: scylla-operator-system
         path: /validate-scylla-scylladb-com-v1-scyllacluster
     failurePolicy: Fail
-    sideEffects: NoneOnDryRun
+    sideEffects: None
     name: webhook.scylla.scylladb.com
     rules:
       - apiGroups:
@@ -51,3 +52,4 @@ webhooks:
           - UPDATE
         resources:
           - scyllaclusters
+    admissionReviewVersions: ["v1", "v1beta1"]

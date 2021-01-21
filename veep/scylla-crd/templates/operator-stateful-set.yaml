@@ -32,23 +32,11 @@ spec:
                   fieldPath: metadata.namespace
           image: scylladb/scylla-operator:nightly
           imagePullPolicy: IfNotPresent
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: 8080
-              scheme: HTTP
           name: manager
           ports:
             - containerPort: 443
               name: webhook-server
               protocol: TCP
-          readinessProbe:
-            httpGet:
-              path: /readyz
-              port: 8080
-              scheme: HTTP
-            initialDelaySeconds: 5
-            periodSeconds: 10
           resources:
             limits:
               cpu: 100m

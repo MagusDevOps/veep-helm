@@ -6,8 +6,8 @@ metadata:
   name: simple-scylla-cluster
   namespace: scylla
 spec:
-  version: 4.3.0
-  agentVersion: 2.2.1
+  version: 4.2.0
+  agentVersion: 2.2.0
   developerMode: true
   datacenter:
     name: us-ease-1

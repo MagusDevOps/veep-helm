@@ -1,15 +1,23 @@
 apiVersion: scylla.scylladb.com/v1alpha1
 kind: ScyllaCluster
 metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
   name: simple-scylla-cluster
   namespace: scylla
 spec:
+  version: 4.2.0
   agentVersion: 2.2.1
+  developerMode: true
   datacenter:
-    name: manager-dc
+    name: us-ease-1
     racks:
-      - members: 1
-        name: manager-rack
+      - name: us-east-1a
+        scyllaAgentConfig: scylla-agent-config
+        scyllaConfig: scylla-config
+        members: 1
+        storage:
+          capacity: 5Gi
         resources:
           limits:
             cpu: 4
@@ -17,9 +25,3 @@ spec:
           requests:
             cpu: 2
             memory: 2Gi
-        scyllaAgentConfig: scylla-agent-config
-        scyllaConfig: scylla-config
-        storage:
-          capacity: 10Gi
-  developerMode: false
-  version: 4.3.0

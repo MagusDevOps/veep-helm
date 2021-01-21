@@ -40,7 +40,7 @@ webhooks:
         namespace: scylla-operator-system
         path: /validate-scylla-scylladb-com-v1-scyllacluster
     failurePolicy: Fail
-    sideEffects: None
+    sideEffects: NoneOnDryRun
     name: webhook.scylla.scylladb.com
     rules:
       - apiGroups:

@@ -1,4 +1,4 @@
-apiVersion: scylla.scylladb.com/v1alpha1
+apiVersion: scylla.scylladb.com/v1
 kind: ScyllaCluster
 metadata:
   labels:

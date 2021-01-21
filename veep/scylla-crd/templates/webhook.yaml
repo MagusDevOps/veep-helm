@@ -10,14 +10,14 @@ webhooks:
       service:
         name: scylla-operator-webhook-service
         namespace: scylla-operator-system
-        path: /mutate-scylla-scylladb-com-v1alpha1-scyllacluster
+        path: /mutate-scylla-scylladb-com-v1-scyllacluster
     failurePolicy: Fail
     name: webhook.scylla.scylladb.com
     rules:
       - apiGroups:
           - scylla.scylladb.com
         apiVersions:
-          - v1alpha1
+          - v1
         operations:
           - CREATE
           - UPDATE
@@ -29,6 +29,7 @@ kind: ValidatingWebhookConfiguration
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: scylla-operator-system/scylla-operator-serving-cert
+  creationTimestamp: null
   name: scylla-operator-validating-webhook-configuration
 webhooks:
   - clientConfig:
@@ -36,14 +37,14 @@ webhooks:
       service:
         name: scylla-operator-webhook-service
         namespace: scylla-operator-system
-        path: /validate-scylla-scylladb-com-v1alpha1-scyllacluster
+        path: /validate-scylla-scylladb-com-v1-scyllacluster
     failurePolicy: Fail
     name: webhook.scylla.scylladb.com
     rules:
       - apiGroups:
           - scylla.scylladb.com
         apiVersions:
-          - v1alpha1
+          - v1
         operations:
           - CREATE
           - UPDATE

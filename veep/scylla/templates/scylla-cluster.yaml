@@ -1,4 +1,4 @@
-apiVersion: scylla.scylladb.com/v1
+apiVersion: scylla.scylladb.com/v1alpha1
 kind: ScyllaCluster
 metadata:
   name: simple-scylla-cluster

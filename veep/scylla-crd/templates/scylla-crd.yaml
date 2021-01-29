@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: scylla-operator-system/scylla-operator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.3.0
+    controller-gen.kubebuilder.io/version: v1.0.0
   creationTimestamp: null
   name: scyllaclusters.scylla.scylladb.com
 spec:

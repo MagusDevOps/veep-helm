@@ -23,5 +23,5 @@ spec:
             cpu: 2
             memory: 2Gi
           requests:
-            cpu: 2
+            cpu: 100m
             memory: 2Gi
